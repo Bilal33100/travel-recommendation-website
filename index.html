@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelEase - Your Personal Travel Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-plane"></i>
+                <span>TravelEase</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i> About Us</a></li>
+                <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact Us</a></li>
+            </ul>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search destinations...">
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+                <button id="clearBtn"><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Discover Your Perfect Getaway</h1>
+                <p class="hero-subtitle">Personalized travel recommendations tailored just for you. Explore hidden gems and popular destinations worldwide.</p>
+                <button class="cta-button" id="exploreBtn">Explore Destinations</button>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Travel destination">
+            </div>
+        </section>
+
+        <!-- Introduction -->
+        <section class="introduction">
+            <h2>Welcome to TravelEase</h2>
+            <p>Your ultimate travel companion for planning unforgettable journeys. We combine AI-powered recommendations with local expertise to help you discover destinations that match your preferences, budget, and travel style.</p>
+            <p>Whether you're seeking adventure, relaxation, cultural immersion, or culinary delights, we've got you covered with personalized suggestions and comprehensive travel information.</p>
+        </section>
+
+        <!-- Recommendations Section -->
+        <section class="recommendations">
+            <h2>Top Recommendations</h2>
+            <div class="recommendation-grid">
+                <!-- Beach Destinations -->
+                <div class="category">
+                    <h3><i class="fas fa-umbrella-beach"></i> Beach Destinations</h3>
+                    <div class="destination-card">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Maldives Beach">
+                        <div class="card-content">
+                            <h4>Maldives Paradise</h4>
+                            <p>Crystal clear waters and overwater bungalows. Perfect for honeymooners and luxury seekers.</p>
+                            <button class="book-btn" onclick="showDetails('maldives')">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="destination-card">
+                        <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Bali Beach">
+                        <div class="card-content">
+                            <h4>Bali, Indonesia</h4>
+                            <p>Vibrant culture, surf-friendly waves, and stunning sunsets. Ideal for adventure and relaxation.</p>
+                            <button class="book-btn" onclick="showDetails('bali')">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Temple Destinations -->
+                <div class="category">
+                    <h3><i class="fas fa-place-of-worship"></i> Temple Destinations</h3>
+                    <div class="destination-card">
+                        <img src="https://images.unsplash.com/photo-1528164344705-47542687000d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Angkor Wat">
+                        <div class="card-content">
+                            <h4>Angkor Wat, Cambodia</h4>
+                            <p>The largest religious monument in the world. A UNESCO World Heritage site with rich history.</p>
+                            <button class="book-btn" onclick="showDetails('angkor')">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="destination-card">
+                        <img src="https://images.unsplash.com/photo-1585506936724-fa0c19d430b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Golden Temple">
+                        <div class="card-content">
+                            <h4>Golden Temple, India</h4>
+                            <p>A spiritual haven of peace and equality. Marvel at the golden structure reflecting in the sacred pool.</p>
+                            <button class="book-btn" onclick="showDetails('golden-temple')">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Country Recommendations -->
+                <div class="category">
+                    <h3><i class="fas fa-globe-asia"></i> Country Highlights</h3>
+                    <div class="destination-card">
+                        <img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Japan">
+                        <div class="card-content">
+                            <h4>Japan</h4>
+                            <p>From ancient temples to futuristic cities. Experience cherry blossoms, sushi, and bullet trains.</p>
+                            <button class="book-btn" onclick="showDetails('japan')">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="destination-card">
+                        <img src="https://images.unsplash.com/photo-1514214246283-d427a95c5d2f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Italy">
+                        <div class="card-content">
+                            <h4>Italy</h4>
+                            <p>Art, history, and culinary excellence. Explore Rome, Venice, Florence, and the Amalfi Coast.</p>
+                            <button class="book-btn" onclick="showDetails('italy')">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search Results -->
+        <section class="search-results" id="searchResults">
+            <h2>Search Results</h2>
+            <div id="resultsContainer"></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 TravelEase. All rights reserved. | <a href="about.html">About Us</a> | <a href="contact.html">Contact</a> | <a href="#">Privacy Policy</a></p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
